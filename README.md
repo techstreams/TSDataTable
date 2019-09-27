@@ -1,13 +1,15 @@
 # TSDataTable
 
-**TSDataTable** is a simple elegant data table publishing tool for Google Sheets &amp; Sites.  See the [blog post](https://medium.com/@techstreams/tsdatatable-simple-elegant-data-tables-for-google-sheets-sites-28ccd35385d0).
+**TSDataTable** is a simple elegant data table publishing tool for Google Sheets &amp; Sites.  
+
+See the [blog post](https://medium.com/@techstreams/tsdatatable-simple-elegant-data-tables-for-google-sheets-sites-28ccd35385d0).
 
 ![](img/Diagram1.png)
 
 
-**TSDataTable** employs [Google Apps Script](https://developers.google.com/apps-script) inside a [(Google Sheet](https://www.google.com/sheets/about/) to retrieve data from the *first sheet*, filter the data based on hidden rows and columns, cache the data to speed subsequent views and display data in a nicely formatted, paginated and searchable data table. 
+**TSDataTable** employs [Google Apps Script](https://developers.google.com/apps-script) inside a [Google Sheet](https://www.google.com/sheets/about/) to retrieve data from the *first sheet*, filter the data based on hidden rows and columns, cache the data to speed loading and display data in a nicely formatted, paginated and searchable data table. 
 
-**TSDataTable** display options are configurable and the resulting site can be standalone or embedded in Google Sites.
+**TSDataTable** display options are configurable and the resulting site can be standalone or embedded in [Google Sites](https://medium.com/r/?url=https%3A%2F%2Fgsuite.google.com%2Fproducts%2Fsites%2F).
 
 **TSDataTable** is intended for data table publishing within a [G Suite for Business](https://gsuite.google.com/solutions/) or [G Suite for Education](https://edu.google.com/products/gsuite-for-education) domain.
 
@@ -25,9 +27,13 @@
 
 ### Table Data
 
-Once enabled, **TSDataTable** retrieves data from the *first sheet* of the Google Sheet.  *If you would like to display another tab of data, move the tab you wish to display to the first tab location in the Google Sheet and reload the table.*
+Once enabled, **TSDataTable** retrieves data from the *first sheet* of the Google Sheet.  
+
+*If you would like to display another sheet of data, move that sheet to the first position in the Google Sheet and clear the data cache.*
 
 To add, delete or change the order of the table data columns or rows [add, delete or move columns/rows](https://support.google.com/docs/answer/54813) in Google Sheets.
+
+![](img/Diagram2.png)
 
 
 #### Column Headings
