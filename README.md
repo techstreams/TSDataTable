@@ -27,26 +27,29 @@ See the [blog post](https://medium.com/@techstreams/tsdatatable-simple-elegant-d
 
 ### Table Data
 
-Once enabled, **TSDataTable** retrieves data from the *first sheet* of the Google Sheet.  
+Once enabled, **TSDataTable** retrieves data from the *first sheet* of the Google Sheet and uses the *first* row of data as the **table column headings** in the resulting table display.  
 
-*If you would like to display another sheet of data, move that sheet to the first position in the Google Sheet and clear the data cache.*
+*If you would like to display another sheet of data, move that sheet to the first position in the Google Spreadsheet and clear the data cache using the table configuration options.*
 
 To add, delete or change the order of the table data columns or rows [add, delete or move columns/rows](https://support.google.com/docs/answer/54813) in Google Sheets.
 
 ![](img/Diagram2.png)
 
-
-#### Column Headings
-
-**TSDataTable** uses the *first* row of data as the **table column headings** in the resulting table display.
-
-#### Column Alignment
+### Data Table Column Alignment
 
 To align the data in the table columns, align the corresponding column header in the *first row* of the Google Sheet. 
 
-#### Hide Data
+![](img/Diagram3.png)
 
-To remove data columns or rows in the table view, [hide](https://support.google.com/docs/answer/9060449) the corresponding columns or rows in Google Sheets and reload the table.  *In this example rows 2 through 5 are hidden and column C is hidden.  The data in the hidden rows and hidden column will not display in the table.*
+
+
+#### Hide Table Data
+
+To remove data columns or rows in the table view, [hide](https://support.google.com/docs/answer/9060449) the corresponding columns or rows in Google Sheets and reload the table.  
+
+*In this example rows 2-4 are hidden and column C is hidden.  The data in the hidden rows and hidden column will not display in the table.*
+
+![](img/Diagram4.png)
 
 
 ---
