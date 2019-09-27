@@ -43,13 +43,24 @@ To align the data in the table columns, align the corresponding column header in
 
 
 
-#### Hide Table Data
+### Hide Table Data
 
 To remove data columns or rows in the table view, [hide](https://support.google.com/docs/answer/9060449) the corresponding columns or rows in Google Sheets and reload the table.  
 
-*In this example rows 2-4 are hidden and column C is hidden.  The data in the hidden rows and hidden column will not display in the table.*
-
 ![](img/Diagram4.png)
+
+
+---
+
+## Additional Notes
+
+* **TSDataTable** is intended for internal use within a [G Suite for Business](https://gsuite.google.com/solutions/) or [G Suite for Education](https://edu.google.com/products/gsuite-for-education) domain.
+
+* **TSDataTable** caches data for up to 6 hours to speed table display but the cache can be manually cleared to pick up new data and table configuration changes.
+
+* **TSDataTable** is not meant to be used with large data sets.  If you receive error for exceeding the cache quota and need a more robust solution look at [App Maker](https://developers.google.com/appmaker/).
+
+* **TSDataTable** works with the **new** version of Google Sites.
 
 
 ---
