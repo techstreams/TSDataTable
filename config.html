@@ -1,0 +1,319 @@
+<!-- 
+* Copyright Laura Taylor
+* (https://github.com/techstreams/TSDataTable)
+*
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+* of this software and associated documentation files (the "Software"), to deal
+* in the Software without restriction, including without limitation the rights
+* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the Software is
+* furnished to do so, subject to the following conditions:
+*
+* The above copyright notice and this permission notice shall be included in all
+* copies or substantial portions of the Software.
+*
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+* AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+* OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+* SOFTWARE.
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@3.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.0.19/dist/vuetify.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <style>[v-cloak] {display: none}</style>
+  </head>
+  <body>
+    <div id="app">
+      <v-app v-cloak>
+         <nav>
+           <v-toolbar text dense color="grey lighten-3">
+             <v-toolbar-title></v-toolbar-title>
+             <v-spacer></v-spacer>
+             <v-tooltip bottom>
+               <template v-slot:activator="{ on }">
+                 <v-btn icon v-on="on" @click="refresh()">
+                   <v-icon>refresh</v-icon>
+                 </v-btn>
+               </template>
+               <span>Reload Table</span>
+             </v-tooltip>
+             <v-tooltip bottom>
+               <template v-slot:activator="{ on }">
+                 <v-btn icon v-on="on" @click="saveConfig()">
+                   <v-icon>save</v-icon>
+                 </v-btn>
+               </template>
+               <span>Save Configuration</span>
+             </v-tooltip>
+             <v-tooltip bottom>
+               <template v-slot:activator="{ on }">
+                 <v-btn icon v-on="on" @click="dialog = true">
+                   <v-icon>mdi-dots-vertical</v-icon>
+                 </v-btn>
+               </template>
+               <span>Configure Table</span>
+             </v-tooltip>
+           </v-toolbar>
+         </nav>           
+         <v-data-table
+                      :dark="config.table.dark"
+                      :dense="config.table.dense"
+                      :fixed-header="config.table.fixedHeader"
+                      :height="config.table.height"
+                      :headers="data.headers"
+                      :items="data.values"
+                      :search="config.table.search.text"
+                      :disable-sort="!config.table.sort"
+                      :loading="tableloading"
+                      loading-text="Table loading ... Please wait"
+                      item-key="name"
+                      class="elevation-1">
+              <template v-if="config.nav.show || config.table.search.show" v-slot:top>
+                <v-toolbar v-if="config.nav.show" text dense dark :color="config.nav.color">
+                  <v-spacer v-if="config.nav.alignment!=='left'"></v-spacer>
+                  <v-toolbar-title class="text-uppercase">
+                  <span>  {{ config.nav.title }}</span>
+                  </v-toolbar-title>
+                  <v-spacer v-if="config.nav.alignment!=='right'"></v-spacer>
+                </v-toolbar>
+                <v-container v-if="config.table.search.show">
+                  <v-row>
+                    <v-col cols="6"></v-col>
+                    <v-col cols="6">
+                      <v-text-field
+                                    v-model="config.table.search.text"
+                                    clearable
+                                    append-icon="search"
+                                    label="Search"
+                                    single-line
+                                    hide-details></v-text-field>
+                    </v-col>
+                  </v-row>
+                </v-container>
+              </template>
+              <template v-slot:item="{ item, headers }">
+                 <tr>
+                    <template v-for="h in headers">
+                      <td v-if="(item[h.value] === 'TRUE' || item[h.value] === 'FALSE') && config.table.check.show" :class="'text-' + h.align">
+                        <v-icon v-if="item[h.value] === 'TRUE'">{{ config.table.check.type }}</v-icon>
+                      </td>
+                      <td v-else-if="useLinkIcon(item[h.value])" :class="'text-' + h.align">
+                         <v-btn text icon color="primary" :href="item[h.value]" target="_blank">
+                          <v-icon>link</v-icon>
+                        </v-btn>
+                      </td>
+                      <td v-else-if="useLinkUrl(item[h.value])" :class="'text-' + h.align">
+                         <a :href="item[h.value]" target="_blank">{{ item[h.value] }} </a>
+                      </td>
+                      <td v-else :class="'text-' + h.align">{{ item[h.value] }}</td>
+                    </template>
+                 </tr>
+              </template>
+        </v-data-table>              
+        <v-snackbar
+                    v-model="snackbar.show"
+                    bottom
+                    multi-line
+                    :color="snackbar.color"
+                    :timeout="snackbar.timeout">
+          {{ snackbar.text }}
+          <v-btn dark text @click="snackbar.show = false">
+            <v-icon>close</v-icon>
+          </v-btn>
+        </v-snackbar>             
+        <v-dialog v-model="dialog">
+        
+          <v-tabs class="elevation-2"
+                  centered
+                  class="mt-12">
+            <v-tab>Title Controls</v-tab>
+            <v-tab>Table Controls</v-tab>           
+             <v-tab-item> 
+               <v-container>
+                 <v-row>
+                   <v-col cols="5">
+                     <v-checkbox v-model="config.nav.show" label="Show Table Title" color="primary" class="mx-8"></v-checkbox> 
+                   </v-col>
+                   <v-col cols="7">
+                     <v-text-field v-show="config.nav.show"
+                                   v-model="config.nav.title"
+                                   label="Table Title"
+                                   class="mx-8">
+                     </v-text-field>                   
+                   </v-col>
+                 </v-row>
+                 <v-row>      
+                   <v-col cols="8" class="mt-3">
+                     <span v-show="config.nav.show" class="grey--text darken-1 mx-8">Table Title Color</span>
+                     <v-color-picker v-show="config.nav.show"
+                                     v-model="config.nav.color"
+                                     canvas-height="100"
+                                     :mode="'hexa'"
+                                     class="mx-8">
+                     </v-color-picker>                  
+                   </v-col>
+                   <v-col cols="4">
+                   <v-radio-group v-show="config.nav.show" v-model="config.nav.alignment" label="Table Title Alignment" color="primary" column>
+                     <v-radio label="Left" value="left"></v-radio>
+                     <v-radio label="Center" value="center"></v-radio>
+                     <v-radio label="Right" value="right"></v-radio>
+                   </v-radio-group>
+                   </v-col>
+                 </v-row>
+                 <v-row justify="center">
+                   <v-col cols="4">
+                      <v-btn small block color="primary" text @click="dialog=false">View Changes</v-btn>    
+                   </v-col>
+                 </v-row>             
+               </v-container>
+            </v-tab-item>               
+            <v-tab-item>
+              <v-container>
+                <v-row>
+                  <v-col cols="4">
+                    <v-text-field
+                                  v-model="config.table.height"
+                                  class="ml-4"
+                                  label="Table Height (px)"
+                                  max="500"
+                                  min="1"
+                                  step="1"
+                                  style="width: 125px"
+                                  type="number"
+                                  @keydown="false"></v-text-field>
+                  </v-col> 
+                  <v-col cols="4">
+                    <v-checkbox v-model="config.table.dark" label="Dark Theme" color="primary"></v-checkbox>
+                  </v-col>
+                  <v-col cols="4">
+                    <v-checkbox v-model="config.table.dense" label="Dense Table" color="primary"></v-checkbox>
+                  </v-col>
+                </v-row>
+                <v-row>     
+                  <v-col cols="4">
+                    <v-checkbox v-model="config.table.search.show" class="ml-4" label="Show Search" color="primary"></v-checkbox>             
+                  </v-col>
+                  <v-col cols="4">
+                    <v-checkbox v-model="config.table.fixedHeader" label="Fixed Headers" color="primary"></v-checkbox>
+                  </v-col>
+                  <v-col cols="4">
+                    <v-checkbox v-model="config.table.sort" label="Allow Sort" color="primary"></v-checkbox>
+                  </v-col>
+                </v-row> 
+                <v-row>
+                  <v-col cols="6">
+                    <v-checkbox v-model="config.table.check.show" class="ml-4" label="Show True/False Values as Check Marks" color="primary"></v-checkbox>             
+                  </v-col>
+                  <v-col cols="6">
+                    <v-select v-if="config.table.check.show"
+                              v-model="config.table.check.type"
+                              :items="config.table.controls.checkoptions"
+                              label="Check Mark Type"
+                              class="mr-4"></v-select>
+                  </v-col>         
+                </v-row>
+                <v-row>
+                  <v-col cols="6">
+                    <v-checkbox v-model="config.table.link.show" class="ml-4" label="Show Link as URL" color="primary"></v-checkbox>             
+                  </v-col>
+                  <v-col cols="6">
+                    <v-checkbox v-if="config.table.link.show" v-model="config.table.link.icon" label="Show URL as Icon" color="primary"></v-checkbox>  
+                  </v-col>         
+                </v-row>
+                 <v-row justify="center">
+                   <v-col cols="4">
+                      <v-btn small block color="primary" text @click="dialog=false">View Changes</v-btn>    
+                   </v-col>
+                 </v-row>
+              </v-container>
+            </v-tab-item>              
+          </v-tabs>
+        </v-dialog>          
+        <v-overlay :value="loading">
+          <v-progress-circular indeterminate size="64"></v-progress-circular>
+        </v-overlay>     
+        <v-footer app></v-footer>      
+      </v-app>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.0.19/dist/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: '#app',
+        vuetify: new Vuetify(),
+        data: function() {
+          return {
+            data: <?!= JSON.stringify(data) ?>,
+            config: <?!= JSON.stringify(config) ?>,
+            dialog: false,
+            loading: false,
+            tableloading: false,
+            snackbar: {
+              show: false,
+              color: 'success',
+              timeout: 2000,
+              text: ''
+            }
+         }
+        },
+        methods: {
+          refresh: function() {
+            var self = this;
+            self.tableloading = true;
+            self.data.values = [];
+            google.script.run
+                  .withSuccessHandler(function(results) {
+                     self.data = results;
+                     self.tableloading = false;
+                     self.setSnackbar('Table Loaded!','success',2000);
+                  })
+                  .withFailureHandler(function(err) {
+                     console.log(err.message);
+                     self.tableloading = false;
+                     self.setSnackbar('An Error Ocurred!  Please try again later.','error',5000);
+                  })
+                  .invalidateCache();
+          },
+          saveConfig: function() {
+            var self = this;     
+            self.loading = true;
+            self.dialog = false;
+            google.script.run
+                  .withSuccessHandler(function(results) {
+                     self.setSnackbar('Configuration Saved!','success',2000);
+                  })
+                  .withFailureHandler(function(err) {
+                     console.log(err.message);
+                     self.setSnackbar('An Error Ocurred!  Please try again later.','error',5000);
+                  })
+                  .setConfig(self.config);
+          },
+          setSnackbar: function(text, color, duration) {
+            var self = this;
+            self.snackbar.text = text;
+            self.snackbar.color = color;
+            self.snackbar.timeout = duration;
+            self.loading = false;
+            self.snackbar.show = true;           
+          },
+          useLinkIcon: function(val) {     
+             return (typeof val === 'string' || val instanceof String) && val.match(/^(http|https):\/\//gi) && this.config.table.link.show && this.config.table.link.icon ? true : false;
+          },
+          useLinkUrl: function(val) {
+             return (typeof val === 'string' || val instanceof String) && val.match(/^(http|https):\/\//gi) && this.config.table.link.show && !this.config.table.link.icon ? true : false;
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
+
+

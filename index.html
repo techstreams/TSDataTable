@@ -1,0 +1,117 @@
+<!-- 
+* Copyright Laura Taylor
+* (https://github.com/techstreams/TSDataTable)
+*
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+* of this software and associated documentation files (the "Software"), to deal
+* in the Software without restriction, including without limitation the rights
+* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the Software is
+* furnished to do so, subject to the following conditions:
+*
+* The above copyright notice and this permission notice shall be included in all
+* copies or substantial portions of the Software.
+*
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+* AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+* OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+* SOFTWARE.
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@3.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.0.19/dist/vuetify.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <style>[v-cloak] {display: none}</style>
+  </head>
+  <body>
+    <div id="app">
+      <v-app v-cloak>     
+         <v-data-table  :dark="config.table.dark"
+                        :dense="config.table.dense"
+                        :fixed-header="config.table.fixedHeader"
+                        :height="config.table.height"
+                        :headers="data.headers"
+                        :items="data.values"
+                        :search="config.table.search.text"
+                        :disable-sort="!config.table.sort"
+                        item-key="name"
+                        class="elevation-1">
+              <template v-if="config.nav.show || config.table.search.show" v-slot:top>
+                <v-toolbar v-if="config.nav.show" text dense dark :color="config.nav.color">
+                  <v-spacer v-if="config.nav.alignment!=='left'"></v-spacer>
+                  <v-toolbar-title class="text-uppercase">
+                  <span>  {{ config.nav.title }}</span>
+                  </v-toolbar-title>
+                  <v-spacer v-if="config.nav.alignment!=='right'"></v-spacer>
+                </v-toolbar>
+                <v-container v-if="config.table.search.show">
+                  <v-row>
+                    <v-col cols="6"></v-col>
+                    <v-col cols="6">
+                      <v-text-field
+                                    v-model="config.table.search.text"
+                                    clearable
+                                    append-icon="search"
+                                    label="Search"
+                                    single-line
+                                    hide-details></v-text-field>
+                    </v-col>
+                  </v-row>
+                </v-container>
+              </template>
+              <template v-slot:item="{ item, headers }">
+                 <tr>
+                    <template v-for="h in headers">
+                      <td v-if="(item[h.value] === 'TRUE' || item[h.value] === 'FALSE') && config.table.check.show" :class="'text-' + h.align">
+                        <v-icon v-if="item[h.value] === 'TRUE'">{{ config.table.check.type }}</v-icon>
+                      </td>
+                      <td v-else-if="useLinkIcon(item[h.value])" :class="'text-' + h.align">
+                         <v-btn text icon color="primary" :href="item[h.value]" target="_blank">
+                          <v-icon>link</v-icon>
+                        </v-btn>
+                      </td>
+                      <td v-else-if="useLinkUrl(item[h.value])" :class="'text-' + h.align">
+                         <a :href="item[h.value]" target="_blank">{{ item[h.value] }} </a>
+                      </td>
+                      <td v-else :class="'text-' + h.align">{{ item[h.value] }}</td>
+                    </template>
+                 </tr>
+              </template>
+         </v-data-table>      
+        <v-footer app></v-footer>    
+      </v-app>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.0.19/dist/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: '#app',
+        vuetify: new Vuetify(),
+        data: function() {
+          return {
+            data: <?!= JSON.stringify(data) ?>,
+            config: <?!= JSON.stringify(config) ?>
+          }
+        },
+        methods: {
+          useLinkIcon: function(val) {     
+             return (typeof val === 'string' || val instanceof String) && val.match(/^(http|https):\/\//gi) && this.config.table.link.show && this.config.table.link.icon ? true : false;
+          },
+          useLinkUrl: function(val) {
+             return (typeof val === 'string' || val instanceof String) && val.match(/^(http|https):\/\//gi) && this.config.table.link.show && !this.config.table.link.icon ? true : false;
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
+
+
+
