@@ -50,6 +50,21 @@ To remove data columns or rows in the table view, [hide](https://support.google.
 ![](img/Diagram4.png)
 
 
+### Configure Table Title
+
+
+
+
+| # | OPTION | DESCRIPTION |
+|-| ---- | --------- |
+| 1 | Show Table Title | Enable/Disable table title bar display |
+| 2 | Table Title | Edit table title.  *(The initial table title defaults to the name of the Google Spreadsheet.)* |
+| 3 | Table Title Color | Color picker to set table title bar background color. |
+| 4 | Table Title Alignment | Alignment of table title within title bar (left, center, right). |
+| 5 | View Changes | Button to close configuration dialog to view configuration changes. |
+
+
+
 ---
 
 ## Additional Notes
