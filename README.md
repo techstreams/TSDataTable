@@ -37,7 +37,7 @@ To add, delete or change the order of the table data columns or rows [add, delet
 
 ### Data Table Column Alignment
 
-To align the data in the table columns, align the corresponding column header in the *first row* of the Google Sheet. 
+To align data in the table columns, [align](https://support.google.com/docs/answer/46973) the corresponding column header in the *first row* of the Google Sheet. 
 
 ![](img/Diagram3.png)
 
