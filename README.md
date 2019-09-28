@@ -67,13 +67,15 @@ To remove data columns or rows in the table view, [hide](https://support.google.
 
 ---
 
-## Additional Notes
+## Important Notes
 
 * **TSDataTable** is intended for internal use within a [G Suite for Business](https://gsuite.google.com/solutions/) or [G Suite for Education](https://edu.google.com/products/gsuite-for-education) domain.
 
-* **TSDataTable** caches data for up to 6 hours to speed table display but the cache can be manually cleared to pick up new data and table configuration changes.
+* **TSDataTable** caches data for up to 6 hours to speed table display.  When the cache expires the table data will be retrieved once again and the cache repopulated.  The cache can be manually cleared prior to the 6 hours expiration to pick up new data and table configuration changes.
 
-* **TSDataTable** is not meant to be used with large data sets.  If you receive error for exceeding the cache quota and need a more robust solution look at [App Maker](https://developers.google.com/appmaker/).
+* **TSDataTable** is not meant to be used with large data sets.  If you receive errors for exceeding the cache quota or the table takes to long to populate and you need a more robust solution look at [App Maker](https://developers.google.com/appmaker/).
+
+* **TSDataTable** may not display all sheet data (e.g. [cell images](https://support.google.com/docs/answer/9224754)).
 
 * **TSDataTable** works with the **new** version of Google Sites.
 
