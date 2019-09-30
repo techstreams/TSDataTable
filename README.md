@@ -111,7 +111,7 @@ Configure the table display under the **Table Controls** tab.
 | 1 | Table Height (px)| Set the height of the table display *(measurement in pixels)*. |
 | 2 | Dark Theme | Apply a dark theme to the table display. |
 | 3 | Dense Table | Decrease the height of the table data rows. |
-| 4 | Show Search | Enable/Disable the table search feature. |
+| 4 | Show Search | Enable/Disable the table search feature. *__TIP!__ TRUE/FALSE values and text in URLs is also searchable.* |
 | 5 | Fixed Headers | Fix table column headers to top of table when scrolling. *__NOTE:__ This does not work in IE11 browsers.* |
 | 6 | Allow Sort | Enable/Disable sorting on table column data.  *__NOTE:__ Data sorting is alphanumeric.* |
 | 7 | Show True/False Values as Check Marks | Enable/Disable showing True/False values in Google Sheet as check marks.  *Especially useful if using [Google Sheet checkboxes](https://support.google.com/docs/answer/7684717).  If value is TRUE a check mark will show otherwise the field will be blank.* |
