@@ -19,7 +19,7 @@
 
 ### Installation
 
-* Login to [Google Drive](https://drive.google.com/)
+* Login to **[Google Drive](https://drive.google.com/)**
 
 * Access **[TSDataTable](https://docs.google.com/spreadsheets/d/18RfAnhgNqKR1edRGVSGLO84r87Rfd5WxpNH3dfxj1Ew/copy)**
 
