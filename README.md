@@ -99,6 +99,15 @@ Configure the table display under the **Table Controls** tab.
 | 11 | View Changes | Close configuration dialog to view configuration changes. |
 
 
+### Embed Published Data Table in a Google Site
+
+Once the data table has been published it can be embedded in a Google Site.  Follow the instructions [adding content from another website](https://support.google.com/sites/answer/90569) on the Google Sites documentation.  
+
+*__TIP!__ By controlling the size of the embed area in the Google Site, you can control additional viewing of the data table.*
+
+**TSDataTable** works with the ***new*** version of Google Sites.
+
+
 
 ---
 
