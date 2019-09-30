@@ -103,7 +103,7 @@ function configureView() {
  */
 function showAbout() {
    var template = HtmlService.createTemplateFromFile('about');
-   SpreadsheetApp.getUi().showModelessDialog(template.evaluate().setHeight(380), ' ');
+   SpreadsheetApp.getUi().showModelessDialog(template.evaluate().setHeight(400), ' ');
 }
 
 
