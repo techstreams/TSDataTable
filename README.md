@@ -56,6 +56,8 @@ To remove data columns or rows in the table view, [hide](https://support.google.
 
 :exclamation: :exclamation: *The first time the __TSDataTable__ menu is accessed, the script will prompt for __authorization__. Complete the authorization process by following the Google authorization prompts.*
 
+![](img/Diagram5.png)
+
 
 ### Configure Table Title
 
@@ -85,7 +87,10 @@ To remove data columns or rows in the table view, [hide](https://support.google.
 | 5 | Fixed Headers | Fix table column headers to top of table when scrolling. *__NOTE:__ This does not work in IE11 browsers.* |
 | 6 | Allow Sort | Enable/Disable sorting on table column data.  *__NOTE:__ Data sorting is alphanumeric.* |
 | 7 | Show True/False Values as Check Marks | Enable/Disable showing True/False values in Google Sheet as check marks.  *Especially useful if using [Google Sheet checkboxes](https://support.google.com/docs/answer/7684717).  If value is TRUE a check mark will show, otherwise the field will be blank.* |
-| 8 | Check Mark Type | EnabDetermine the type of check mark icon which displays when value is TRUE.  *__NOTE:__  Option 7 must be enabled to set the check mark type.* |
+| 8 | Check Mark Type | Determine the type of check mark icon which displays when value is TRUE.  *__NOTE:__  Option 7 must be enabled to set the check mark type.* |
+| 9 | Show Link as URL | Enable/Disable http or https links displaying as active URLs. |
+| 10 | Show URL as Icon | Turn http or https URLs into a linked icon vs. the actual full URL.  *__NOTE:__  Option 9 must be enabled to set the URL to an icon.* |
+| 11 | View Changes | Close configuration dialog to view configuration changes. |
 
 
 
