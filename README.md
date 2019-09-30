@@ -25,7 +25,7 @@
 
 ### Table Data
 
-Once enabled, **TSDataTable** retrieves data from the *first sheet* of the Google Sheet and uses the *first* row of data as the **table column headings** in the resulting table display.  
+**TSDataTable** retrieves data from the *first sheet* of the Google Sheet and uses the *first* row of data as the **table column headings** in the resulting table display.  
 
 *If you would like to display another sheet of data, move that sheet to the first position in the Google Spreadsheet and clear the data cache using the table configuration options.*
 
@@ -99,13 +99,25 @@ Configure the table display under the **Table Controls** tab.
 | 11 | View Changes | Close configuration dialog to view configuration changes. |
 
 
+### Publish Data Table
+
+To publish a data table as a web application:
+
+* Open the **Script Editor** in the host **TSDataTable** Google Sheet via the ***Tools*** → ***<> Script Editor*** menu.
+
+
+* Follow the steps in [Deploying a script as a web app](https://developers.google.com/apps-script/guides/web#deploying_a_script_as_a_web_app) with the following changes:
+  * Under ***Execute the app as:*** → select your account
+  * Under ***Who has access to the app:*** → select ***Anyone within <your domain>***
+  
+:exclamation: *To access the published data table, use the URL from ***Current web app URL*** section of the publishing dialog aboes (URL that ends in `/exec`).  Also use this URL to embed the published data table in a Google Site (see next section).*
+
+
 ### Embed Published Data Table in a Google Site
 
-Once the data table has been published it can be embedded in a Google Site.  Follow the instructions [adding content from another website](https://support.google.com/sites/answer/90569) on the Google Sites documentation.  
+Once the data table has been published it can be embedded in the ***new*** version of Google Sites.  Follow the instructions [adding content from another website](https://support.google.com/sites/answer/90569) on the Google Sites documentation.  
 
 *__TIP!__ By controlling the size of the embed area in the Google Site, you can control additional viewing of the data table.*
-
-**TSDataTable** works with the ***new*** version of Google Sites.
 
 
 
