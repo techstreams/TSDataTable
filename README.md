@@ -110,7 +110,7 @@ To publish a data table as a web application:
   * Under ***Execute the app as:*** → select your account
   * Under ***Who has access to the app:*** → select ***Anyone within <your domain>***
   
-:exclamation: *To access the published data table, use the URL from ***Current web app URL*** section of the publishing dialog aboes (URL that ends in `/exec`).  Also use this URL to embed the published data table in a Google Site (see next section).*
+To access the published data table, use the URL from ***Current web app URL*** section of the publishing dialog aboes *(URL that ends in `/exec`)*.  Also use this URL to embed the published data table in a Google Site *(see next section)*.
 
 
 ### Embed Published Data Table in a Google Site
@@ -133,7 +133,7 @@ Once the data table has been published it can be embedded in the ***new*** versi
 
 * **TSDataTable** may not display all sheet data (e.g. [cell images](https://support.google.com/docs/answer/9224754)).
 
-* **TSDataTable** works with the **new** version of Google Sites.
+* **TSDataTable** works with the ***new*** version of Google Sites.
 
 
 ---
