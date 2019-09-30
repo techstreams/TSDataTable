@@ -66,9 +66,26 @@ To remove data columns or rows in the table view, [hide](https://support.google.
 |-| ---- | --------- |
 | 1 | Show Table Title | Enable/Disable table title bar display |
 | 2 | Table Title | Edit table title.  *(The initial table title defaults to the name of the Google Spreadsheet.)* |
-| 3 | Table Title Color | Color picker to set table title bar background color. |
-| 4 | Table Title Alignment | Alignment of table title within title bar (left, center, right). |
-| 5 | View Changes | Button to close configuration dialog to view configuration changes. |
+| 3 | Table Title Color | Set table title bar background color. |
+| 4 | Table Title Alignment | Align of table title within title bar *(left, center, right)*. |
+| 5 | View Changes | Close configuration dialog to view configuration changes. |
+
+
+### Configure Table Display
+
+
+
+
+| # | OPTION | DESCRIPTION |
+|-| ---- | --------- |
+| 1 | Table Height (px)| Set the height of the table display *(measurement in pixels)*. |
+| 2 | Dark Theme | Apply a dark theme to the table display. |
+| 3 | Dense Table | Decrease the height of the table data rows. |
+| 4 | Show Search | Enable/Disable the table search feature. |
+| 5 | Fixed Headers | Fix table column headers to top of table when scrolling. *__NOTE:__ This does not work in IE11 browsers.* |
+| 6 | Allow Sort | Enable/Disable sorting on table column data.  *__NOTE:__ Data sorting is alphanumeric.* |
+| 7 | Show True/False Values as Check Marks | Enable/Disable showing True/False values in Google Sheet as check marks.  *Especially useful if using [Google Sheet checkboxes](https://support.google.com/docs/answer/7684717).  If value is TRUE a check mark will show, otherwise the field will be blank.* |
+| 8 | Check Mark Type | EnabDetermine the type of check mark icon which displays when value is TRUE.  *__NOTE:__  Option 7 must be enabled to set the check mark type.* |
 
 
 
