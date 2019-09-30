@@ -56,7 +56,7 @@ To remove data columns or rows in the table view, [hide](https://support.google.
 
 ![](img/Diagram5.png)
 
-Once the ***Configure Data Table*** dialog opens, click the three dot icon at the top right to open the table title and table display configuration dialog.
+To **open the table title and table display configuration**, click the three dot icon at the top right.  To **save configuration changes**, click the **Save** icon.  To **reload data or configuration changes** in the data table, click the **reload** icon.
 
 ![](img/Diagram6.png)
 
@@ -108,7 +108,7 @@ To publish a data table as a web application:
 
 * Follow the steps in [Deploying a script as a web app](https://developers.google.com/apps-script/guides/web#deploying_a_script_as_a_web_app) with the following changes:
   * Under ***Execute the app as:*** → select your account
-  * Under ***Who has access to the app:*** → select ***Anyone within <your domain>***
+  * Under ***Who has access to the app:*** → select ***Anyone within "your domain"***
   
 To access the published data table, use the URL from ***Current web app URL*** section of the publishing dialog aboes *(URL that ends in `/exec`)*.  Also use this URL to embed the published data table in a Google Site *(see next section)*.
 
