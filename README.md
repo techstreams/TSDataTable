@@ -5,9 +5,9 @@
 ![](img/Diagram9.png)
 
 
-**TSDataTable** employs [Google Apps Script](https://developers.google.com/apps-script) inside a [Google Sheet](https://www.google.com/sheets/about/) to retrieve data from the *first sheet*, filter the data based on hidden rows and columns, cache the data to speed loading and display data in a nicely formatted, paginated and searchable data table. 
+**TSDataTable** employs [Google Apps Script](https://developers.google.com/apps-script) inside a [Google Sheet](https://www.google.com/sheets/about/) to retrieve data from the *first sheet*, filter the data based on hidden rows and columns, cache the data to speed loading and display data in a nicely formatted, paginated and searchable data table.   This data table can be published as a web application.
 
-**TSDataTable** display options are configurable and the resulting published site can be viewed standalone or [embedded](https://support.google.com/sites/answer/90569) in [Google Sites](https://gsuite.google.com/products/sites).
+**TSDataTable** display options are configurable and the resulting published web application can be viewed standalone or [embedded](https://support.google.com/sites/answer/90569) in [Google Sites](https://gsuite.google.com/products/sites).
 
 **TSDataTable** is intended for data table publishing within a [G Suite for Business](https://gsuite.google.com/solutions/) or [G Suite for Education](https://edu.google.com/products/gsuite-for-education) domain.
 
@@ -57,9 +57,15 @@ To remove data columns or rows in the table view, [hide](https://support.google.
 
 ### Configuration
 
-**TSDataTable** configuration is accessed through the host Google Sheet menu ***TSDataTable*** → ***Configure Data Table***.
+**TSDataTable** configuration is accessed through the host Google Sheet menu ***TSDataTable*** → ***Configure Data Table***. 
 
-:exclamation: *The first time the __TSDataTable__ menu is accessed, the script will prompt for __authorization__. Complete the authorization process by following the Google authorization prompts.*
+**IMPORTANT NOTES:**
+
+* The first time the __TSDataTable__ menu is accessed, the script will prompt for __authorization__. Complete the authorization flow by following the Google authorization prompts.
+
+* The first time the configuration dialog is opened *(or the table data retrieved after the cache has expired)* there will be a delay before the dialog displays.
+
+* If you encounter a problem displaying the configuration dialog, close the dialog and re-open it.
 
 ![](img/Diagram5.png)
 
@@ -86,7 +92,7 @@ Configure the table title display under the **Title Controls** tab.
 | # | OPTION | DESCRIPTION |
 |-| ---- | --------- |
 | 1 | Show Table Title | Enable/Disable table title bar display |
-| 2 | Table Title | Edit table title.  *(The initial table title defaults to the name of the Google Spreadsheet.)* |
+| 2 | Table Title | Edit table title.  *__NOTE:__ The initial table title defaults to the name of the Google Spreadsheet.* |
 | 3 | Table Title Color | Set table title bar background color. |
 | 4 | Table Title Alignment | Align of table title within title bar *(left, center, right)*. |
 | 5 | View Changes | Close configuration dialog to view configuration changes. |
@@ -108,10 +114,10 @@ Configure the table display under the **Table Controls** tab.
 | 4 | Show Search | Enable/Disable the table search feature. |
 | 5 | Fixed Headers | Fix table column headers to top of table when scrolling. *__NOTE:__ This does not work in IE11 browsers.* |
 | 6 | Allow Sort | Enable/Disable sorting on table column data.  *__NOTE:__ Data sorting is alphanumeric.* |
-| 7 | Show True/False Values as Check Marks | Enable/Disable showing True/False values in Google Sheet as check marks.  *Especially useful if using [Google Sheet checkboxes](https://support.google.com/docs/answer/7684717).  If value is TRUE a check mark will show, otherwise the field will be blank.* |
+| 7 | Show True/False Values as Check Marks | Enable/Disable showing True/False values in Google Sheet as check marks.  *Especially useful if using [Google Sheet checkboxes](https://support.google.com/docs/answer/7684717).  If value is TRUE a check mark will show otherwise the field will be blank.* |
 | 8 | Check Mark Type | Determine the type of check mark icon which displays when value is TRUE.  *__NOTE:__  Option 7 must be enabled to set the check mark type.* |
 | 9 | Show Link as URL | Enable/Disable http or https links displaying as active URLs. |
-| 10 | Show URL as Icon | Turn http or https URLs into a linked icon vs. the actual full URL.  *__NOTE:__  Option 9 must be enabled to set the URL to an icon.* |
+| 10 | Show URL as Icon | Turn http or https URLs into linked icons vs. the actual full URLs.  *__NOTE:__  Option 9 must be enabled to set the URL to an icon.* |
 | 11 | View Changes | Close configuration dialog to view configuration changes. |
 
 <br>
@@ -127,13 +133,13 @@ To publish a data table as a web application:
   * Under ***Execute the app as:*** → select your account
   * Under ***Who has access to the app:*** → select ***Anyone within "your domain"***
   
-To access the published data table, use the URL from ***Current web app URL*** section of the publishing dialog aboes *(URL that ends in `/exec`)*.  Also use this URL to embed the published data table in a Google Site *(see next section)*.
+To access the published data table, use the URL from ***Current web app URL*** section of the publishing dialog above *(URL that ends in `/exec`)*.  Also use this URL to embed the published data table in a Google Site *(see next section)*.
 
 <br>
 
 ### Embed Published Data Table in a Google Site
 
-Once the data table has been published it can be embedded in the ***new*** version of Google Sites.  Follow the instructions [adding content from another website](https://support.google.com/sites/answer/90569) on the Google Sites documentation.  
+Once the data table has been published, it can be embedded in the ***new*** version of Google Sites.  Follow the instructions [adding content from another website](https://support.google.com/sites/answer/90569) on the Google Sites documentation.  
 
 *__TIP!__ By controlling the size of the embed area in the Google Site, you can control additional viewing of the data table.*
 
