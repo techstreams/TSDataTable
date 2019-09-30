@@ -50,6 +50,13 @@ To remove data columns or rows in the table view, [hide](https://support.google.
 ![](img/Diagram4.png)
 
 
+### Configuration
+
+**TSDataTable** configuration is accessed through the host Google Sheet menu ***TSDataTable*** → ***Configure Data Table***.
+
+:exclamation: :exclamation: *The first time the __TSDataTable__ menu is accessed, the script will prompt for __authorization__. Complete the authorization process by following the Google authorization prompts.*
+
+
 ### Configure Table Title
 
 
