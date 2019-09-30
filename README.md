@@ -7,7 +7,7 @@
 
 **TSDataTable** employs [Google Apps Script](https://developers.google.com/apps-script) inside a [Google Sheet](https://www.google.com/sheets/about/) to retrieve data from the *first sheet*, filter the data based on hidden rows and columns, cache the data to speed loading and display data in a nicely formatted, paginated and searchable data table. 
 
-**TSDataTable** display options are configurable and the resulting site can be standalone or [embedded](https://support.google.com/sites/answer/90569) in [Google Sites](https://gsuite.google.com/products/sites).
+**TSDataTable** display options are configurable and the resulting published site can be viewed standalone or [embedded](https://support.google.com/sites/answer/90569) in [Google Sites](https://gsuite.google.com/products/sites).
 
 **TSDataTable** is intended for data table publishing within a [G Suite for Business](https://gsuite.google.com/solutions/) or [G Suite for Education](https://edu.google.com/products/gsuite-for-education) domain.
 
