@@ -57,6 +57,9 @@ To remove data columns or rows in the table view, [hide](https://support.google.
 ![](img/Diagram5.png)
 
 
+### Configure Data Table
+
+
 * To open the table title and table display configuration, click the **options** icon at the top right.  
 * To save configuration changes, click the **save** icon.  
 * To reload data or configuration changes, click the **reload** icon.
