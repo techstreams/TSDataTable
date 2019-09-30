@@ -21,7 +21,7 @@
 
 * Login to [Google Drive](https://drive.google.com/)
 
-* Access TSDataTable
+* Access **[TSDataTable](https://docs.google.com/spreadsheets/d/18RfAnhgNqKR1edRGVSGLO84r87Rfd5WxpNH3dfxj1Ew/copy)**
 
 * Click the ***Make a copy*** button. _This will copy the **TSDataTable** host Google Sheet to your Google Drive._
 
