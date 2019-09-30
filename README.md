@@ -2,7 +2,7 @@
 
 **TSDataTable** is a simple, elegant data table publishing tool for Google Sheets &amp; Sites.  
 
-![](img/Diagram1.png)
+![](img/Diagram9.png)
 
 
 **TSDataTable** employs [Google Apps Script](https://developers.google.com/apps-script) inside a [Google Sheet](https://www.google.com/sheets/about/) to retrieve data from the *first sheet*, filter the data based on hidden rows and columns, cache the data to speed loading and display data in a nicely formatted, paginated and searchable data table. 
@@ -15,6 +15,8 @@
 
 ## Getting Started
 
+<br>
+
 ### Installation
 
 * Login to [Google Drive](https://drive.google.com/)
@@ -22,6 +24,8 @@
 * Access TSDataTable
 
 * Click the ***Make a copy*** button. _This will copy the **TSDataTable** host Google Sheet to your Google Drive._
+
+<br>
 
 ### Table Data
 
@@ -33,13 +37,15 @@ To add, delete or change the order of the table data columns or rows [add, delet
 
 ![](img/Diagram2.png)
 
+<br>
+
 ### Data Table Column Alignment
 
 To align data in the table columns, [align](https://support.google.com/docs/answer/46973) the corresponding column header in the *first row* of the Google Sheet. 
 
 ![](img/Diagram3.png)
 
-
+<br>
 
 ### Hide Table Data
 
@@ -47,6 +53,7 @@ To remove data columns or rows in the table view, [hide](https://support.google.
 
 ![](img/Diagram4.png)
 
+<br>
 
 ### Configuration
 
@@ -56,6 +63,7 @@ To remove data columns or rows in the table view, [hide](https://support.google.
 
 ![](img/Diagram5.png)
 
+<br>
 
 ### Configure Data Table
 
@@ -66,6 +74,7 @@ To remove data columns or rows in the table view, [hide](https://support.google.
 
 ![](img/Diagram6.png)
 
+<br>
 
 ### Configure Table Title
 
@@ -82,6 +91,7 @@ Configure the table title display under the **Title Controls** tab.
 | 4 | Table Title Alignment | Align of table title within title bar *(left, center, right)*. |
 | 5 | View Changes | Close configuration dialog to view configuration changes. |
 
+<br>
 
 ### Configure Table Display
 
@@ -104,6 +114,7 @@ Configure the table display under the **Table Controls** tab.
 | 10 | Show URL as Icon | Turn http or https URLs into a linked icon vs. the actual full URL.  *__NOTE:__  Option 9 must be enabled to set the URL to an icon.* |
 | 11 | View Changes | Close configuration dialog to view configuration changes. |
 
+<br>
 
 ### Publish Data Table
 
@@ -118,6 +129,7 @@ To publish a data table as a web application:
   
 To access the published data table, use the URL from ***Current web app URL*** section of the publishing dialog aboes *(URL that ends in `/exec`)*.  Also use this URL to embed the published data table in a Google Site *(see next section)*.
 
+<br>
 
 ### Embed Published Data Table in a Google Site
 
