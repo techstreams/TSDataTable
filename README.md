@@ -51,7 +51,7 @@ To align data table columns, [align](https://support.google.com/docs/answer/4697
 
 ### Hide Table Data
 
-To remove data columns or rows in the data table, [hide](https://support.google.com/docs/answer/9060449) the corresponding columns or rows in Google Sheets and clear the table data cache using the table configuration options *(see instructions below)*.  
+To remove data columns or rows in the data table, [hide](https://support.google.com/docs/answer/9060449) the corresponding columns or rows in the Google Sheet and clear the table data cache using the table configuration options *(see instructions below)*.  
 
 ![](img/Diagram4.png)
 
