@@ -5,7 +5,7 @@
 ![](img/Diagram9.png)
 
 
-**TSDataTable** employs [Google Apps Script](https://developers.google.com/apps-script) inside a [Google Sheet](https://www.google.com/sheets/about/) to retrieve data from the *first sheet*, filter the data based on hidden rows and columns, cache the data to speed subsequent load times and display data in a nicely formatted, paginated and searchable data table.   This data table can be published as a web application.
+**TSDataTable** employs [Google Apps Script](https://developers.google.com/apps-script) inside a [Google Spreadsheet](https://www.google.com/sheets/about/) to retrieve data from the *first sheet*, filter the data based on hidden rows and columns, cache the data to speed subsequent load times and display data in a nicely formatted, paginated and searchable data table.   This data table can be published as a web application.
 
 **TSDataTable** display options are configurable and the published web application can be viewed standalone or [embedded](https://support.google.com/sites/answer/90569) in [Google Sites](https://gsuite.google.com/products/sites).
 
@@ -25,7 +25,7 @@
 
 * Access **[TSDataTable](https://docs.google.com/spreadsheets/d/18RfAnhgNqKR1edRGVSGLO84r87Rfd5WxpNH3dfxj1Ew/copy)**
 
-* Click the ***Make a copy*** button. _This will copy the **TSDataTable** host Google Sheet to your Google Drive._
+* Click the ***Make a copy*** button. _This will copy the **TSDataTable** host Google Spreadsheet to your Google Drive._
 
 <br>
 
