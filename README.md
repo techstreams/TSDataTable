@@ -83,7 +83,7 @@ To remove data columns or rows in the data table, **[hide](https://support.googl
 
 * Click the **save** icon to save configuration changes.  *__NOTE:__ Any saved configuration changes will update in the published data table web application on the next display.*
 
-* Click the **reload** icon to reload data and invalidate/clear the data table cache.  *__NOTE:__ Any data changes will update in the published data table web application on the next dipslay.*
+* Click the **reload** icon to invalidate/clear the data table cache and reload the data.  *__NOTE:__ Any data changes will update in the published data table web application on the next dipslay.*
 
 
 
