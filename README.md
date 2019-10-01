@@ -2,6 +2,8 @@
 
 **TSDataTable** is a simple, elegant data table publishing tool for [Google Sheets](https://www.google.com/sheets/about/) &amp; [Sites](https://gsuite.google.com/products/sites).  
 
+See the [blog post](https://medium.com/@techstreams/tsdatatable-simple-elegant-data-tables-for-google-sheets-sites-28ccd35385d0).
+
 ![](img/Diagram9.png)
 
 
