@@ -11,6 +11,8 @@
 
 **TSDataTable** is intended for data table publishing within a [G Suite for Business](https://gsuite.google.com/solutions/) or [G Suite for Education](https://edu.google.com/products/gsuite-for-education) domain.
 
+<br>
+
 ---
 
 ## Getting Started
@@ -145,10 +147,11 @@ To access the published data table web application, use the URL from ***Current 
 
 ### Embed Published Data Table in a Google Site
 
-Once the data table has been published, it can be embedded in the ***new*** version of Google Sites.  Follow the instructions [adding content from another website](https://support.google.com/sites/answer/90569) on the Google Sites documentation.  
+Once the data table has been published as a web application, it can be embedded in the ***new*** version of Google Sites.  Follow the instructions for [adding content from another website](https://support.google.com/sites/answer/90569) on the Google Sites documentation.  
 
-*__TIP!__ By controlling the size of the embed area in the Google Site, you can control additional viewing of the data table.*
+*__TIP!__ By controlling the size of the Google Site embed area, you can further control display of the data table.*
 
+<br>
 
 
 ---
