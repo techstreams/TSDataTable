@@ -86,7 +86,7 @@ To remove data columns or rows in the data table, [hide](https://support.google.
 
 ### Configure Table Title
 
-Configure the table title display under the **Title Controls** tab *(options defined below)*.
+Configure the data table title display under the **Title Controls** tab *(options defined below)*.
 
 *:exclamation: Don't forget to __save__ configuration changes!*
 
@@ -105,7 +105,7 @@ Configure the table title display under the **Title Controls** tab *(options def
 
 ### Configure Table Display
 
-Configure the table display under the **Table Controls** tab *(options defined below)*.
+Configure the data table display under the **Table Controls** tab *(options defined below)*.
 
 *:exclamation: Don't forget to __save__ configuration changes!*
 
@@ -137,9 +137,9 @@ To publish a data table as a web application:
 
 * Follow the steps in [Deploying a script as a web app](https://developers.google.com/apps-script/guides/web#deploying_a_script_as_a_web_app) with the following changes:
   * Under ***Execute the app as:*** → select your account
-  * Under ***Who has access to the app:*** → select ***Anyone within "your domain"***
+  * Under ***Who has access to the app:*** → select ***Anyone within "your domain"*** *where "your domain" is the name of your [G Suite for Business](https://gsuite.google.com/solutions/) or [G Suite for Education](https://edu.google.com/products/gsuite-for-education) domain
   
-To access the published data table, use the URL from ***Current web app URL*** section of the publishing dialog above *(URL that ends in `/exec`)*.  Also use this URL to embed the published data table in a Google Site *(see next section)*.
+To access the published data table web application, use the URL from ***Current web app URL*** section of the publishing dialog above *(URL ends in `/exec`)*.  Also use this URL to embed the published data table in a Google Site *(see next section)*.
 
 <br>
 
