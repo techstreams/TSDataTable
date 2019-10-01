@@ -167,7 +167,7 @@ Once the data table has been published as a web application it can be embedded i
 
 * **TSDataTable** is not meant to be used with large data sets.  If you receive errors for exceeding the cache quota or the table takes to long to load, you may need a more robust solution like [App Maker](https://developers.google.com/appmaker/).
 
-* **TSDataTable** may not display all sheet data *(e.g. [cell images](https://support.google.com/docs/answer/9224754))*.
+* **TSDataTable** may not display all sheet data types *(e.g. [cell images](https://support.google.com/docs/answer/9224754))*.
 
 * **TSDataTable** works with the ***new*** version of Google Sites.
 
