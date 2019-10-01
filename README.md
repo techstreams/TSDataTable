@@ -59,15 +59,17 @@ To remove data columns or rows in the data table, [hide](https://support.google.
 
 **TSDataTable** configuration is accessed through the host Google Sheet menu ***TSDataTable*** → ***Configure Data Table***. 
 
+![](img/Diagram5.png)
+
 **IMPORTANT NOTES:**
 
 * The first time the __TSDataTable__ menu is accessed, the script will prompt for __authorization__. Complete the authorization flow by following the Google authorization prompts.
 
-* The first time the configuration dialog is opened *(or the table data retrieved after the cache has expired)* there will be a delay before the dialog displays.
+* The first time the configuration dialog is opened *(or the table data is retrieved after the cache has expired)* there will be a delay before the dialog displays.
 
-* If you encounter a problem displaying the configuration dialog, close the dialog and re-open it.
+* If you encounter a problem displaying the configuration dialog, close the dialog by clicking the `X` in the top right and re-open the dialog.
 
-![](img/Diagram5.png)
+
 
 <br>
 
