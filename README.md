@@ -86,40 +86,44 @@ To remove data columns or rows in the data table, [hide](https://support.google.
 
 ### Configure Table Title
 
-Configure the table title display under the **Title Controls** tab.
+Configure the table title display under the **Title Controls** tab *(options defined below)*.
+
+*:exclamation: Don't forget to __save__ configuration changes!*
 
 ![](img/Diagram7.png)
 
 
 | # | OPTION | DESCRIPTION |
 |-| ---- | --------- |
-| 1 | Show Table Title | Enable/Disable table title bar display |
+| 1 | Show Table Title | Enable/Disable table title bar display. |
 | 2 | Table Title | Edit table title.  *__NOTE:__ The initial table title defaults to the name of the Google Spreadsheet.* |
 | 3 | Table Title Color | Set table title bar background color. |
-| 4 | Table Title Alignment | Align of table title within title bar *(left, center, right)*. |
+| 4 | Table Title Alignment | Align table title within title bar *(left, center, right)*. |
 | 5 | View Changes | Close configuration dialog to view configuration changes. |
 
 <br>
 
 ### Configure Table Display
 
-Configure the table display under the **Table Controls** tab.
+Configure the table display under the **Table Controls** tab *(options defined below)*.
+
+*:exclamation: Don't forget to __save__ configuration changes!*
 
 ![](img/Diagram8.png)
 
 
 | # | OPTION | DESCRIPTION |
 |-| ---- | --------- |
-| 1 | Table Height (px)| Set the height of the table display *(measurement in pixels)*. |
+| 1 | Table Height (px)| Set the height of the table display *(height in pixels)*. |
 | 2 | Dark Theme | Apply a dark theme to the table display. |
 | 3 | Dense Table | Decrease the height of the table data rows. |
-| 4 | Show Search | Enable/Disable the table search feature. *__TIP!__ TRUE/FALSE values and text in URLs is also searchable.* |
-| 5 | Fixed Headers | Fix table column headers to top of table when scrolling. *__NOTE:__ This does not work in IE11 browsers.* |
-| 6 | Allow Sort | Enable/Disable sorting on table column data.  *__NOTE:__ Data sorting is alphanumeric.* |
-| 7 | Show True/False Values as Check Marks | Enable/Disable showing True/False values in Google Sheet as check marks.  *Especially useful if using [Google Sheet checkboxes](https://support.google.com/docs/answer/7684717).  If value is TRUE a check mark will show otherwise the field will be blank.* |
-| 8 | Check Mark Type | Determine the type of check mark icon which displays when value is TRUE.  *__NOTE:__  Option 7 must be enabled to set the check mark type.* |
-| 9 | Show Link as URL | Enable/Disable http or https links displaying as active URLs. |
-| 10 | Show URL as Icon | Turn http or https URLs into linked icons vs. the actual full URLs.  *__NOTE:__  Option 9 must be enabled to set the URL to an icon.* |
+| 4 | Show Search | Enable/Disable table search. *__TIP!__ TRUE/FALSE values and text in URLs is also searchable.* |
+| 5 | Fixed Headers | Fix table column headers to top of table when scrolling. *__NOTE:__ This does not work in the IE11 browser.* |
+| 6 | Allow Sort | Enable/Disable data table column sort.  *__NOTE:__ Data sorting is alphanumeric.* |
+| 7 | Show True/False Values as Check Marks | Enable/Disable displaying True/False values from Google Sheet as check marks in data table.  *__TIP!__ Especially useful when using [Google Sheet checkboxes](https://support.google.com/docs/answer/7684717).  If data value is TRUE a check mark will show otherwise the field will be blank.* |
+| 8 | Check Mark Type | Determine the type of check mark icon to display when data value is TRUE.  *__NOTE:__  Option 7 must be enabled to set the check mark type.* |
+| 9 | Show Link as URL | Enable/Disable `http` or `https` links displaying as active URLs. |
+| 10 | Show URL as Icon | Turn `http` or `https` URLs into active icons vs. the actual full URL.  *__NOTE:__  Option 9 must be enabled to set the URL to an icon.* |
 | 11 | View Changes | Close configuration dialog to view configuration changes. |
 
 <br>
