@@ -59,11 +59,11 @@ To remove data columns or rows in the data table, [hide](https://support.google.
 
 ### Configuration
 
-**TSDataTable** configuration is accessed through the host Google Sheet menu ***TSDataTable*** → ***Configure Data Table***. 
+**TSDataTable** configuration is accessed through the host Google Spreadsheet menu ***TSDataTable*** → ***Configure Data Table***. 
 
 ![](img/Diagram5.png)
 
-**IMPORTANT NOTES:**
+**IMPORTANT:**
 
 * The first time the __TSDataTable__ menu is accessed, the script will prompt for __authorization__. Complete the authorization flow by following the Google authorization prompts.
 
@@ -78,9 +78,9 @@ To remove data columns or rows in the data table, [hide](https://support.google.
 ### Configure Data Table
 
 
-* Click the **options** icon at the top right to open the table title/display configuration.  
-* Click the **save** icon to save configuration changes.  *__NOTE:__ Any saved configuration changes will update in the published data table web application.*
-* Click the **reload** icon to reload data and invalidate the cache.  *__NOTE:__ Any data changes will update in the published data table web application.*
+* Click the **options** icon at the top right to open the table configuration.  
+* Click the **save** icon to save configuration changes.  *__NOTE:__ Any saved configuration changes will update in the published data table web application on the next display.*
+* Click the **reload** icon to reload data and invalidate/clear the cache.  *__NOTE:__ Any data changes will update in the published data table web application on the next dipslay.*
 
 ![](img/Diagram6.png)
 
@@ -116,16 +116,16 @@ Configure the data table display under the **Table Controls** tab *(options defi
 
 | # | OPTION | DESCRIPTION |
 |-| ---- | --------- |
-| 1 | Table Height (px)| Set the height of the table display *(height in pixels)*. |
+| 1 | Table Height (px)| Set the height of the data table display *(height in pixels)*. |
 | 2 | Dark Theme | Apply a dark theme to the table display. |
 | 3 | Dense Table | Decrease the height of the table data rows. |
-| 4 | Show Search | Enable/Disable table search. *__TIP!__ TRUE/FALSE values and text in URLs is also searchable.* |
+| 4 | Show Search | Enable/Disable table search. *__TIP!__ TRUE/FALSE values and text in URLs are also searchable.* |
 | 5 | Fixed Headers | Fix table column headers to top of table when scrolling. *__NOTE:__ This does not work in the IE11 browser.* |
 | 6 | Allow Sort | Enable/Disable data table column sort.  *__NOTE:__ Data sorting is alphanumeric.* |
-| 7 | Show True/False Values as Check Marks | Enable/Disable displaying True/False values from Google Sheet as check marks in data table.  *__TIP!__ Especially useful when using [Google Sheet checkboxes](https://support.google.com/docs/answer/7684717).  If data value is TRUE a check mark will show otherwise the field will be blank.* |
+| 7 | Show True/False Values as Check Marks | Enable/Disable displaying TRUE/FALSE values from Google Sheet as check marks in data table.  *__TIP!__ This is especially useful when using [Google Sheet checkboxes](https://support.google.com/docs/answer/7684717).  If data value is TRUE a check mark will show otherwise the field will be blank.* |
 | 8 | Check Mark Type | Determine the type of check mark icon to display when data value is TRUE.  *__NOTE:__  Option 7 must be enabled to set the check mark type.* |
 | 9 | Show Link as URL | Enable/Disable `http` or `https` links displaying as active URLs. |
-| 10 | Show URL as Icon | Turn `http` or `https` URLs into active icons vs. the actual full URL.  *__NOTE:__  Option 9 must be enabled to set the URL to an icon.* |
+| 10 | Show URL as Icon | Turn `http` or `https` URLs into active icons vs. the full URL.  *__NOTE:__  Option 9 must be enabled to set the URL to an icon.* |
 | 11 | View Changes | Close configuration dialog to view configuration changes. |
 
 <br>
@@ -134,12 +134,12 @@ Configure the data table display under the **Table Controls** tab *(options defi
 
 To publish a data table as a web application:
 
-* Open the **Script Editor** in the host **TSDataTable** Google Sheet via the ***Tools*** → ***<> Script Editor*** menu.
+* Open the **Script Editor** in the host **TSDataTable** Google Spreadsheet via the ***Tools*** → ***<> Script Editor*** menu.
 
 
 * Follow the steps in [Deploying a script as a web app](https://developers.google.com/apps-script/guides/web#deploying_a_script_as_a_web_app) with the following changes:
   * Under ***Execute the app as:*** → select your account
-  * Under ***Who has access to the app:*** → select ***Anyone within "your domain"*** *where "your domain" is the name of your [G Suite for Business](https://gsuite.google.com/solutions/) or [G Suite for Education](https://edu.google.com/products/gsuite-for-education) domain
+  * Under ***Who has access to the app:*** → select ***Anyone within "your domain"*** *where "your domain" is the name of your [G Suite for Business](https://gsuite.google.com/solutions/) or [G Suite for Education](https://edu.google.com/products/gsuite-for-education) domain.*
   
 To access the published data table web application, use the URL from ***Current web app URL*** section of the publishing dialog above *(URL ends in `/exec`)*.  Also use this URL to embed the published data table in a Google Site *(see next section)*.
 
