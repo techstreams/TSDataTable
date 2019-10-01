@@ -125,8 +125,8 @@ Configure the data table display under the **Table Controls** tab *(options defi
 | 4 | Show Search | Enable/Disable table search. *__TIP!__ TRUE/FALSE values and text in URLs are also searchable.* |
 | 5 | Fixed Headers | Fix table column headers to top of table when scrolling. *__NOTE:__ This does not work in the IE11 browser.* |
 | 6 | Allow Sort | Enable/Disable data table column sort.  *__NOTE:__ Data sorting is alphanumeric.* |
-| 7 | Show True/False Values as Check Marks | Enable/Disable displaying TRUE/FALSE values from Google Sheet as check marks in data table.  *__TIP!__ This is especially useful when using [Google Sheet checkboxes](https://support.google.com/docs/answer/7684717).  If data value is TRUE a check mark will show otherwise the field will be blank.* |
-| 8 | Check Mark Type | Determine the type of check mark icon to display when data value is TRUE.  *__NOTE:__  Option 7 must be enabled to set the check mark type.* |
+| 7 | Show True/False Values as Check Marks | Enable/Disable displaying TRUE/FALSE values from the Google Sheet as check marks in the data table.  *__TIP!__ This is especially useful when using [Google Sheet checkboxes](https://support.google.com/docs/answer/7684717).  If the data value is TRUE a check mark will show otherwise the field will be blank.* |
+| 8 | Check Mark Type | Determine the type of check mark icon to display when the data value is TRUE.  *__NOTE:__  Option 7 must be enabled to set the check mark type.* |
 | 9 | Show Link as URL | Enable/Disable `http` or `https` links displaying as active URLs. |
 | 10 | Show URL as Icon | Turn `http` or `https` URLs into active icons vs. the full URL.  *__NOTE:__  Option 9 must be enabled to set the URL to an icon.* |
 | 11 | View Changes | Close configuration dialog to view configuration changes. |
@@ -142,15 +142,15 @@ To publish a data table as a web application:
 
 * Follow the steps in [Deploying a script as a web app](https://developers.google.com/apps-script/guides/web#deploying_a_script_as_a_web_app) with the following changes:
   * Under ***Execute the app as:*** → select your account
-  * Under ***Who has access to the app:*** → select ***Anyone within "your domain"*** *where "your domain" is the name of your [G Suite for Business](https://gsuite.google.com/solutions/) or [G Suite for Education](https://edu.google.com/products/gsuite-for-education) domain.*
+  * Under ***Who has access to the app:*** → select ***Anyone within "your domain"*** *... where "your domain" is the name of your [G Suite for Business](https://gsuite.google.com/solutions/) or [G Suite for Education](https://edu.google.com/products/gsuite-for-education) domain.*
   
-To access the published data table web application, use the URL from ***Current web app URL*** section of the publishing dialog above *(URL ends in `/exec`)*.  Also use this URL to embed the published data table in a Google Site *(see next section)*.
+To access the published data table web application, use the URL from the ***Current web app URL*** section of the web application publishing dialog *(URL ends in `/exec`)*.  Also use this URL to embed the published data table in a Google Site *(see next section)*.
 
 <br>
 
 ### Embed Published Data Table in a Google Site
 
-Once the data table has been published as a web application, it can be embedded in the ***new*** version of Google Sites.  Follow the instructions for [adding content from another website](https://support.google.com/sites/answer/90569) on the Google Sites documentation.  
+Once the data table has been published as a web application it can be embedded in the ***new*** version of Google Sites.  Follow the instructions for [adding content from another website](https://support.google.com/sites/answer/90569) on the Google Sites documentation.  
 
 *__TIP!__ By controlling the size of the Google Site embed area, you can further control display of the data table.*
 
@@ -167,7 +167,7 @@ Once the data table has been published as a web application, it can be embedded 
 
 * **TSDataTable** is not meant to be used with large data sets.  If you receive errors for exceeding the cache quota or the table takes to long to load, you may need a more robust solution like [App Maker](https://developers.google.com/appmaker/).
 
-* **TSDataTable** may not display all sheet data (e.g. [cell images](https://support.google.com/docs/answer/9224754)).
+* **TSDataTable** may not display all sheet data *(e.g. [cell images](https://support.google.com/docs/answer/9224754))*.
 
 * **TSDataTable** works with the ***new*** version of Google Sites.
 
