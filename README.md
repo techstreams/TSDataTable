@@ -154,6 +154,8 @@ Once the data table has been published as a web application it can be embedded i
 
 *__TIP!__ By controlling the size of the Google Site embed area, you can further control display of the data table.*
 
+![](img/Diagram9.png)
+
 <br>
 
 
