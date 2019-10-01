@@ -33,7 +33,7 @@
 
 **TSDataTable** retrieves data from the *first sheet* of the Google Spreadsheet and uses the *first* row of data as the **table column headings** in the resulting table display.  
 
-To add, delete or change the order of the table data columns or rows ... [add, delete or move columns/rows](https://support.google.com/docs/answer/54813) in the Google Sheet.
+To add, delete or change the order of the table data columns or rows ... **[add, delete or move columns/rows](https://support.google.com/docs/answer/54813)** in the Google Sheet.
 
 *If you would like to display another sheet of data in the data table, move the desired sheet to the first position in the Google Spreadsheet and clear the table data cache using the table configuration options (see instructions below).*
 
@@ -43,7 +43,7 @@ To add, delete or change the order of the table data columns or rows ... [add, d
 
 ### Data Table Column Alignment
 
-To align data table columns, [align](https://support.google.com/docs/answer/46973) the corresponding column header in the *first row* of the Google Sheet. 
+To align data table columns, **[align](https://support.google.com/docs/answer/46973)** the corresponding column header in the *first row* of the Google Sheet. 
 
 ![](img/Diagram3.png)
 
@@ -51,7 +51,7 @@ To align data table columns, [align](https://support.google.com/docs/answer/4697
 
 ### Hide Table Data
 
-To remove data columns or rows in the data table, [hide](https://support.google.com/docs/answer/9060449) the corresponding columns or rows in the Google Sheet and clear the table data cache using the table configuration options *(see instructions below)*.  
+To remove data columns or rows in the data table, **[hide](https://support.google.com/docs/answer/9060449)** the corresponding columns or rows in the Google Sheet and clear the table data cache using the table configuration options *(see instructions below)*.  
 
 ![](img/Diagram4.png)
 
@@ -171,7 +171,7 @@ Once the data table has been published as a web application, it can be embedded 
 
 ---
 
-## Credits
+## Additional Credits
 
 * [Vue.js](https://vuejs.org) - Progressive Javascript Framework
 
