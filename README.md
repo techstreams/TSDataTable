@@ -69,7 +69,7 @@ To remove data columns or rows in the data table, **[hide](https://support.googl
 
 * The first time the configuration dialog is opened *(or the table data is retrieved after the cache has expired)* there will be a delay before the dialog displays.
 
-* If you encounter a problem displaying the configuration dialog, close the dialog by clicking the `X` in the top right and re-open the dialog.
+* If you encounter a problem displaying the configuration dialog, close the dialog by clicking the `X` in the top right and then re-open.
 
 
 
