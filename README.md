@@ -5,9 +5,9 @@
 ![](img/Diagram9.png)
 
 
-**TSDataTable** employs [Google Apps Script](https://developers.google.com/apps-script) inside a [Google Sheet](https://www.google.com/sheets/about/) to retrieve data from the *first sheet*, filter the data based on hidden rows and columns, cache the data to speed loading and display data in a nicely formatted, paginated and searchable data table.   This data table can be published as a web application.
+**TSDataTable** employs [Google Apps Script](https://developers.google.com/apps-script) inside a [Google Sheet](https://www.google.com/sheets/about/) to retrieve data from the *first sheet*, filter the data based on hidden rows and columns, cache the data to speed subsequent load times and display data in a nicely formatted, paginated and searchable data table.   This data table can be published as a web application.
 
-**TSDataTable** display options are configurable and the resulting published web application can be viewed standalone or [embedded](https://support.google.com/sites/answer/90569) in [Google Sites](https://gsuite.google.com/products/sites).
+**TSDataTable** display options are configurable and the published web application can be viewed standalone or [embedded](https://support.google.com/sites/answer/90569) in [Google Sites](https://gsuite.google.com/products/sites).
 
 **TSDataTable** is intended for data table publishing within a [G Suite for Business](https://gsuite.google.com/solutions/) or [G Suite for Education](https://edu.google.com/products/gsuite-for-education) domain.
 
@@ -29,11 +29,11 @@
 
 ### Table Data
 
-**TSDataTable** retrieves data from the *first sheet* of the Google Sheet and uses the *first* row of data as the **table column headings** in the resulting table display.  
+**TSDataTable** retrieves data from the *first sheet* of the Google Spreadsheet and uses the *first* row of data as the **table column headings** in the resulting table display.  
 
 To add, delete or change the order of the table data columns or rows [add, delete or move columns/rows](https://support.google.com/docs/answer/54813) in Google Sheets.
 
-*If you would like to display another sheet of data, move that sheet to the first position in the Google Spreadsheet and clear the data cache using the table configuration options (see instructions below).*
+*If you would like to display another sheet of data in the data table, move the desired sheet to the first position in the Google Spreadsheet and clear the table data cache using the table configuration options (see instructions below).*
 
 ![](img/Diagram2.png)
 
@@ -41,7 +41,7 @@ To add, delete or change the order of the table data columns or rows [add, delet
 
 ### Data Table Column Alignment
 
-To align data in the table columns, [align](https://support.google.com/docs/answer/46973) the corresponding column header in the *first row* of the Google Sheet. 
+To align data table columns, [align](https://support.google.com/docs/answer/46973) the corresponding column header in the *first row* of the Google Sheet. 
 
 ![](img/Diagram3.png)
 
@@ -49,7 +49,7 @@ To align data in the table columns, [align](https://support.google.com/docs/answ
 
 ### Hide Table Data
 
-To remove data columns or rows in the table view, [hide](https://support.google.com/docs/answer/9060449) the corresponding columns or rows in Google Sheets and reload the table.  
+To remove data columns or rows in the data table, [hide](https://support.google.com/docs/answer/9060449) the corresponding columns or rows in Google Sheets and clear the table data cache using the table configuration options *(see instructions below)*.  
 
 ![](img/Diagram4.png)
 
