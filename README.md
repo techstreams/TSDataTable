@@ -33,7 +33,7 @@
 
 **TSDataTable** retrieves data from the *first sheet* of the Google Spreadsheet and uses the *first* row of data as the **table column headings** in the resulting table display.  
 
-To add, delete or change the order of the table data columns or rows [add, delete or move columns/rows](https://support.google.com/docs/answer/54813) in the Google Sheet.
+To add, delete or change the order of the table data columns or rows ... [add, delete or move columns/rows](https://support.google.com/docs/answer/54813) in the Google Sheet.
 
 *If you would like to display another sheet of data in the data table, move the desired sheet to the first position in the Google Spreadsheet and clear the table data cache using the table configuration options (see instructions below).*
 
