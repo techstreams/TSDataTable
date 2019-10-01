@@ -79,7 +79,7 @@ function doGet() {
   var template= HtmlService.createTemplateFromFile('index');
   template.data = getData();
   template.config = getConfig();
-  return template.evaluate();
+  return template.evaluate().setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
 }
 
 /*
