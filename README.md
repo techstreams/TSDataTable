@@ -79,7 +79,7 @@ To remove data columns or rows in the data table, **[hide](https://support.googl
 
 ![](img/Diagram6.png)
 
-* Click the **options** icon at the top right to open the table configuration.  
+* Click the **options** icon to open the table configuration.  
 
 * Click the **save** icon to save configuration changes.  *__NOTE:__ Any saved configuration changes will update in the published data table web application on the next display.*
 
