@@ -76,9 +76,9 @@ To remove data columns or rows in the data table, [hide](https://support.google.
 ### Configure Data Table
 
 
-* To open the table title and table display configuration, click the **options** icon at the top right.  
-* To save configuration changes, click the **save** icon.  
-* To reload data or configuration changes, click the **reload** icon.
+* Click the **options** icon at the top right to open the table title/display configuration.  
+* Click the **save** icon to save configuration changes.  *__NOTE:__ Any saved configuration changes will update in the published data table web application.*
+* Click the **reload** icon to reload data and invalidate the cache.  *__NOTE:__ Any data changes will update in the published data table web application.*
 
 ![](img/Diagram6.png)
 
