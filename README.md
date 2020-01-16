@@ -25,9 +25,9 @@ See the [blog post](https://medium.com/@techstreams/tsdatatable-simple-elegant-d
 
 * Login to **[Google Drive](https://drive.google.com/)**
 
-* Access **[TSDataTable](https://docs.google.com/spreadsheets/d/18RfAnhgNqKR1edRGVSGLO84r87Rfd5WxpNH3dfxj1Ew/copy)**
+* Access **[TSDataTable](https://techstreams.page.link/TSDataTables)**
 
-* Click the ***Make a copy*** button. _This will copy the **TSDataTable** host Google Spreadsheet to your Google Drive._
+* Click the ***Use Template*** button. _This will copy the **TSDataTable** host Google Spreadsheet to your Google Drive._
 
 <br>
 
