@@ -137,7 +137,7 @@ function getData() {
       }
     });    
     values.forEach(function(row, r) {
-      var newObj;
+      var rowObj;
       if (r !== 0 && (!sheet.isRowHiddenByFilter(r+1) && !sheet.isRowHiddenByUser(r+1))) {
         rowObj = {};
         row.forEach(function(col, c) {
