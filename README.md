@@ -32,7 +32,7 @@ See the [blog post](https://medium.com/@techstreams/tsdatatable-simple-elegant-d
 
 * Login to **[Google Drive](https://drive.google.com/)**
 
-* Access **[TSDataTable](https://techstreams.page.link/TSDataTables)**
+* Access **[TSDataTable](https://docs.google.com/spreadsheets/d/121G8kJTf2i7ihrp73IfxNzN9c7Y80fp6ha5Q3iBTlbM/template/preview)**
 
 * Click the ***Use Template*** button. _This will copy the **TSDataTable** host Google Spreadsheet to your Google Drive._
 
